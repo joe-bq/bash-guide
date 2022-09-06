@@ -13,8 +13,8 @@ fi
 
 
 while (( "$#" )); do 
-     echo cleaning $1
     if [ "$1" != "master" ]; then 
+        echo cleaning $1
         printf "git branch -D $1\n";
         git branch -D $1;
         if [ "$?" == 0 ]; then
